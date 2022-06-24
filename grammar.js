@@ -740,7 +740,7 @@ module.exports = grammar({
 
     // currently nested quotes not allowed
     /* eslint-disable no-unused-vars */
-    string_literal: $ => /"[A-Za-z0-9 ~@#$%^&*_'`+{}[\]()<>|/!?.,;:=-]*"/,
+    string_literal: $ => /".*"/,
     /* eslint-enable no-unused-vars */
 
     reject_statement: $ => seq(

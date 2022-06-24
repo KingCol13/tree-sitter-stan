@@ -2,10 +2,11 @@
   "name": "tree-sitter-stan",
   "version": "0.1.0",
   "description": "Stan grammar for node-tree-sitter",
-  "main": "index.js",
+  "main": "bindings/node",
   "keywords": [
     "parser",
-    "lexer"
+    "lexer",
+    "stan"
   ],
   "author": {
     "name": "Jeffrey B. Arnold",
@@ -25,7 +26,7 @@
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-import": "^2.13.0",
-    "tree-sitter-cli": "^0.12.6"
+    "tree-sitter-cli": "^0.20.6"
   },
   "scripts": {
     "build": "tree-sitter generate && node-gyp build",

@@ -252,3 +252,18 @@ model {
               (identifier)
               (identifier)
               (identifier))))))
+
+===========
+Hello world
+===========
+
+model{
+  print("Hello world!");
+}
+
+---
+
+(program
+  (model
+    (print_statement
+      (string_literal))))

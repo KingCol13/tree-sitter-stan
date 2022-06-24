@@ -251,6 +251,13 @@ model {
 
 ---
 
+(program
+  (model
+    (variable_declaration
+    (row_vector_type (integer_literal))
+    (identifier)
+    (vector_expression (integer_literal)))))
+
 ============================================
 Vector declaration and assignment
 ============================================

@@ -3246,7 +3246,7 @@
     },
     "string_literal": {
       "type": "PATTERN",
-      "value": "\"[A-Za-z0-9 ~@#$%^&*_'`+{}[\\]()<>|\\/!?.,;:=-]*\""
+      "value": "\".*\""
     },
     "reject_statement": {
       "type": "SEQ",
@@ -3511,7 +3511,7 @@
               },
               {
                 "type": "PATTERN",
-                "value": "[^*]*\\*+([^\\/*][^*]*\\*+)*"
+                "value": "[^*]*\\*+([^/*][^*]*\\*+)*"
               },
               {
                 "type": "STRING",
@@ -3559,10 +3559,13 @@
       "_common_expression"
     ]
   ],
+  "precedences": [],
   "externals": [],
   "inline": [
     "_statement",
     "_variable_decl_statements",
     "_variable_decls"
-  ]
+  ],
+  "supertypes": []
 }
+
