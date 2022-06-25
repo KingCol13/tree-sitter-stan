@@ -8,6 +8,10 @@
     "lexer",
     "stan"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jrnold/tree-sitter-stan.git"
+  },
   "author": {
     "name": "Jeffrey B. Arnold",
     "email": "jeffrey.arnold@gmail.com",
@@ -15,7 +19,6 @@
   },
   "license": "MIT",
   "dependencies": {
-    "bindings": "1.2.x",
     "nan": "^2.10.0"
   },
   "bugs": {
@@ -32,5 +35,13 @@
     "build": "tree-sitter generate && node-gyp build",
     "test": "tree-sitter test",
     "run-examples": "tree-sitter parse examples/stan/src/test/test-models/good/ && tree-sitter parse examples/stan/src/test/test-models/good-standalone-functions/"
-  }
+  },
+  "tree-sitter": [
+    {
+      "scope": "source.stan",
+      "file-types": [
+        "stan"
+      ]
+    }
+  ]
 }

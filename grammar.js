@@ -146,8 +146,7 @@ module.exports = grammar({
     ),
 
     transformed_data: $ => seq(
-      'transformed',
-      'data',
+      'transformed data',
       $._variable_decl_statements,
     ),
 
@@ -157,8 +156,7 @@ module.exports = grammar({
     ),
 
     transformed_parameters: $ => seq(
-      'transformed',
-      'parameters',
+      'transformed parameters',
       $._variable_decl_statements,
     ),
 
@@ -168,8 +166,7 @@ module.exports = grammar({
     )),
 
     generated_quantities: $ => seq(
-      'generated',
-      'quantities',
+      'generated quantities',
       $._variable_decl_statements,
     ),
 

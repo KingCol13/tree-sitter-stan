@@ -138,11 +138,7 @@
       "members": [
         {
           "type": "STRING",
-          "value": "transformed"
-        },
-        {
-          "type": "STRING",
-          "value": "data"
+          "value": "transformed data"
         },
         {
           "type": "SYMBOL",
@@ -168,11 +164,7 @@
       "members": [
         {
           "type": "STRING",
-          "value": "transformed"
-        },
-        {
-          "type": "STRING",
-          "value": "parameters"
+          "value": "transformed parameters"
         },
         {
           "type": "SYMBOL",
@@ -202,11 +194,7 @@
       "members": [
         {
           "type": "STRING",
-          "value": "generated"
-        },
-        {
-          "type": "STRING",
-          "value": "quantities"
+          "value": "generated quantities"
         },
         {
           "type": "SYMBOL",

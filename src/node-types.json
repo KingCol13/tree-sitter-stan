@@ -3939,7 +3939,7 @@
     "named": false
   },
   {
-    "type": "generated",
+    "type": "generated quantities",
     "named": false
   },
   {
@@ -4007,10 +4007,6 @@
     "named": false
   },
   {
-    "type": "quantities",
-    "named": false
-  },
-  {
     "type": "real",
     "named": false
   },
@@ -4043,7 +4039,11 @@
     "named": false
   },
   {
-    "type": "transformed",
+    "type": "transformed data",
+    "named": false
+  },
+  {
+    "type": "transformed parameters",
     "named": false
   },
   {
