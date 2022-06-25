@@ -3,10 +3,10 @@ functions
 {
 // <- punctuation.bracket
 	real foo(real x) {
-	// <- type
+	// <- type.builtin
 	//    ^ function
-	//        ^ type
-	//            ^ variable.parameter
+	//        ^ type.builtin
+	//            ^ parameter
 	//               ^ punctuation.bracket
 		if (x > 2) {
 			return 1.0;
@@ -24,7 +24,7 @@ transformed data
 {
 // <- punctuation.bracket
 	real x = foo(2.0);
-	// <- type
+	// <- type.builtin
 	//   ^ variable
 	//     ^ operator
 	//        ^ function

@@ -14,7 +14,7 @@
 
 ["if" "else"] @conditional
 
-[";" ","] @delimiter
+[";" "," "|"] @delimiter
 
 [
 	"=" "<-" "+=" "-=" "*=" "/=" ".*=" "./="
@@ -31,14 +31,6 @@
 
 [ "(" ")" "[" "]" "{" "}"] @punctuation.bracket
 
-"print" @function
-
-(escape_sequence) @string.escape
-(string_literal) @string
-
-(integer_literal) @number
-(real_literal) @number
-
 [
 	"int"
 	"real"
@@ -53,15 +45,31 @@
 	"cholesky_factor_cov"
 	"corr_matrix"
 	"cov_matrix"
-] @type
+] @type.builtin
+
+[
+	"lower"
+	"upper"
+] @parameter
+
+"print" @function.builtin
+
+"target" @variable.builtin
+
+(escape_sequence) @string.escape
+(string_literal) @string
+
+(integer_literal) @number
+(real_literal) @number
 
 (comment) @comment
 
 (function_declarator (identifier) @function)
 
-(parameter_declaration (identifier) @variable.parameter)
+(parameter_declaration (identifier) @parameter)
 
 (function_expression (identifier) @function)
 
-(identifier) @variable
+(distr_expression (identifier) @function)
 
+(identifier) @variable
