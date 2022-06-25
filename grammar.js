@@ -735,10 +735,25 @@ module.exports = grammar({
       ';',
     ),
 
-    // currently nested quotes not allowed
-    /* eslint-disable no-unused-vars */
-    string_literal: $ => /".*"/,
-    /* eslint-enable no-unused-vars */
+    string_literal: $ => seq(
+      '"',
+      repeat(choice(
+        token.immediate(prec(1, /[^\\"\n]+/)),
+        $.escape_sequence
+      )),
+      '"',
+    ),
+
+    escape_sequence: $ => token(prec(1, seq(
+      '\\',
+      choice(
+        /[^xuU]/,
+        /\d{2,3}/,
+        /x[0-9a-fA-F]{2,}/,
+        /u[0-9a-fA-F]{4}/,
+        /U[0-9a-fA-F]{8}/,
+      )
+    ))),
 
     reject_statement: $ => seq(
       'reject',

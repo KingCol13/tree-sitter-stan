@@ -1,57 +1,67 @@
-"functions" @keyword
-"data" @keyword
-"transformed data" @keyword
-"parameters" @keyword
-"transformed parameters" @keyword
-"model" @keyword
-"generated quantities" @keyword
+[
+	"functions"
+	"data"
+	"transformed data"
+	"parameters"
+	"transformed parameters"
+	"model"
+	"generated quantities"
+] @keyword
 
-";" @delimiter
+"return" @keyword.return
 
-"^" @delimiter
-".*" @delimiter
-"./" @delimiter
-"*" @delimiter
-"%" @delimiter
-"/" @delimiter
-"+" @delimiter
-"-" @delimiter
-">=" @delimiter
-">" @delimiter
-"<=" @delimiter
-"<" @delimiter
-"!=" @delimiter
-"==" @delimiter
-"&&" @delimiter
-"||" @delimiter
-"+" @delimiter
-"-" @delimiter
-"!" @delimiter
-"\'" @delimiter
+["for" "while" "break" "continue"] @repeat
+
+["if" "else"] @conditional
+
+[";" ","] @delimiter
+
+[
+	"=" "<-" "+=" "-=" "*=" "/=" ".*=" "./="
+	"+" "-" "*" "/" "%" "^"
+	"\'"
+	".*"
+	"./"
+	">=" ">" "<=" "<"
+	"!=" "=="
+	"&&" "||"
+	"!"
+	"?"
+] @operator
 
 [ "(" ")" "[" "]" "{" "}"] @punctuation.bracket
 
 "print" @function
 
+(escape_sequence) @string.escape
 (string_literal) @string
 
 (integer_literal) @number
 (real_literal) @number
 
-"int" @type
-"real" @type
-"vector" @type
-"ordered" @type
-"positive_ordered" @type
-"simplex" @type
-"unit_vector" @type
-"row_vector" @type
-"matrix" @type
-"cholesky_factor_corr" @type
-"cholesky_factor_cov" @type
-"corr_matrix" @type
-"cov_matrix" @type
+[
+	"int"
+	"real"
+	"vector"
+	"ordered"
+	"positive_ordered"
+	"simplex"
+	"unit_vector"
+	"row_vector"
+	"matrix"
+	"cholesky_factor_corr"
+	"cholesky_factor_cov"
+	"corr_matrix"
+	"cov_matrix"
+] @type
+
+(comment) @comment
+
+(function_declarator (identifier) @function)
+
+(parameter_declaration (identifier) @variable.parameter)
+
+(function_expression (identifier) @function)
 
 (identifier) @variable
 
-(comment) @comment
