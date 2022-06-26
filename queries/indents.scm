@@ -6,16 +6,22 @@
 	(transformed_parameters)
 	(model)
 	(generated_quantities)
-	(if_statement)
-	(while_statement)
-	(for_statement)
+	(block_statement)
+	(print_statement)
+	(parenthized_expression)
+	(distr_expression)
 ] @indent
 
 [
 	"else"
+	"("
+	"{"
+] @branch
+
+[
 	")"
 	"}"
-] @branch
+] @branch @indent_end
 
 (string_literal) @ignore
 
@@ -24,3 +30,5 @@
 
 ([(argument_list) (parameter_list)] @aligned_indent
 	(#set! "delimiter" "()"))
+
+(parameter_list) @aligned_indent
